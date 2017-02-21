@@ -1,0 +1,221 @@
+/*
+
+File:			custom.css
+
+Description:	Custom styles for Thesis
+
+
+
+BASIC USAGE:
+
+
+
+If you have enabled the custom stylesheet in the Thesis options panel, the <body> tag 
+
+will be appended with the "custom" class, like so: <body class="custom">. You can use 
+
+the "custom" class to override *any* CSS declarations contained in the style.css file.
+
+
+
+For example, if you wish to change the default link color to green, you would add the 
+
+following declarations to this file:
+
+
+
+	.custom a, .custom a:visited { color: #090; }	<--- This makes links green
+
+	.custom a:hover { color: #00f; }	<--- This makes links blue when you mouse over them
+
+
+
+WHY THIS WORKS:
+
+
+
+By using the "custom" class, you are creating more specific CSS declarations for HTML
+
+elements. CSS styling is applied through rules of specificity, and because declarations
+
+prepended with .custom are more specific, they get applied when the page is rendered!
+
+
+
+More information about styling your Thesis installation using this file can be found
+
+in the User's Guide:
+
+	http://diythemes.com/thesis/rtfm/customizing-thesis-with-customcss/
+
+*/
+
+.ebook a{ color:#F00; background:#FFFF66;}
+
+.ebook a:hover{ color:#FFF; background:#066;}
+
+.title_sidebar{ color:#2B37B4; font-size:16px; font-weight:bold;}
+
+
+
+@font-face {
+
+	font-family: 'CALIBRI';
+
+	src: url('font/CALIBRI.TTF')  format('truetype'); /* Safari, Android, iOS */
+
+	   }
+
+.text_sidebar{margin-top: 0; margin-bottom: 0; font-family:CALIBRI, sans-serif; font-size:20px; }
+
+.sidebar input[type="submit"]{ font-weight:bold; width:4em; text-align:center; line-height:22px;}
+
+
+
+#footer{
+
+ background: #eeeeee;
+
+}
+
+.custom #footer {
+
+ height: 100%;
+
+ width: 100%;
+
+ border-top:2em solid #9c9c9c;
+
+ background: #eeeeee;
+
+padding:0em;
+
+}
+
+.custom #footer a{
+
+ border-bottom: 1px none #cccccc;
+
+}
+
+.custom #footer {
+
+ text-align:center;
+
+}
+
+/* footer widget area setup */
+
+#footer_setup {
+
+ /* widgetized footer background (not footer background) */
+
+ background: #444343;
+
+ /* widget padding */
+
+ padding:1.5em;
+
+ /* margin at bottom of widgets */
+
+ margin-bottom: 25px;
+
+ /* do not change this! */
+
+ overflow: hidden;
+
+}
+
+
+
+/* widget item setup */
+
+#footer_setup .footer_items {
+
+ /* contents alignment */
+
+ text-align: left;
+
+ /* widget width */
+
+ width: 33.3%;
+
+ /* space between widgets */
+
+ padding-right: 0px;
+
+ /* text color */
+
+ color: #2361A1;
+
+ /* do not change these! */
+
+ display: inline-block;
+
+ float: left;
+
+ height: 100%;
+
+}
+
+
+
+/* widget item headers http://adwordsshop.com/wp-admin/admin.php?page=thesis-file-editor*/
+
+#footer_setup .footer_items h3 {
+
+ /* font size */
+
+ font-size: 1.5em;
+
+ /* bold or not */
+
+ font-weight: bold;
+
+ /* uppercase or not */
+
+ text-transform: uppercase;
+
+ /* space out the letters*/
+
+ letter-spacing: 0px;
+
+ /* font color*/
+
+ color: #ffffff;
+
+ /* padding under header text */
+
+ padding-bottom: 3px;
+
+ /* border under header text */
+
+ border-bottom: 3px none #ffdf00;
+
+ /* distance between border and widget text */
+
+ margin-bottom: 5px;
+
+}
+
+
+
+/* do not change these! */
+
+#footer_setup .footer_items ul li { list-style:none;
+
+ font-size:1.4em;
+
+ line-height:1.5em;
+
+}
+
+#footer_setup .footer_items ul { margin: 1em; padding: 0px; }
+/*--- remove post image feature -----------*/
+.teaser .format_teaser .post_image_link img.alignleft {
+	display: none;
+}
+.custom-teaser img.alignleft {
+	margin-right: 0.75em;
+    margin-bottom: 0;
+}
